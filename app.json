@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "TOMA",
+    "slug": "toma-delivery",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0A0A0A",
+    "scheme": "toma-delivery",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0A0A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.toma.delivery",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TOMA necesita acceso a tu cámara para validar entregas",
+        "NSLocationWhenInUseUsageDescription": "TOMA necesita tu ubicación para mostrarte restaurantes cercanos",
+        "NSMicrophoneUsageDescription": "TOMA necesita el micrófono para reseñas de audio"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "com.toma.delivery",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Necesitamos la cámara para validar entregas con QR"
+        }
+      ]
+    ]
+  }
+}
